@@ -5,7 +5,8 @@ function filterCountries(searchVelue) {
     var result = [];
     for(var country of countries) {
         var countryName = country.txt.toLowerCase();
-        if(countryName.indexOf(searchVelue) >= 0) {
+        var indexName = country.cc.toLowerCase();
+        if(countryName.indexOf(searchVelue) >= 0 || indexName.indexOf(searchVelue) >= 0) {
             result.push(country);
         }
     }
